@@ -15,9 +15,9 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     // Delay for 3 seconds then navigate to HomeScreen
     Timer(const Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
-      );
+      Navigator.of(
+        context,
+      ).pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen()));
     });
   }
 
@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
           children: [
             Image.asset(
-              'assets/logo.png',
+              'assets/images/logo.png',
               width: 106,
               // height: 200,
               fit: BoxFit.contain,
