@@ -1,9 +1,10 @@
-import 'package:eattogo_food_app/homeScreen.dart';
+import 'package:eattogo_food_app/FoodItemGrid.dart';
+import 'package:eattogo_food_app/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -15,9 +16,9 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     // Delay for 3 seconds then navigate to HomeScreen
     Timer(const Duration(seconds: 3), () {
-      Navigator.of(
-        context,
-      ).pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen()));
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => HomeScreen()),
+      );
     });
   }
 
